@@ -204,7 +204,7 @@ class Mine(Action_card):
                 trash.append(c)
                 player.hand.remove(c)
                 while c.cost>2 or len(supply["Copper"])>0 or len(supply["Silver"])>0:
-                    pick = input("Choose a coin to gain.  Any coin up to " + str(c.cost+3)+": ")
+                    pick = input("Choose a coin to gainCCel.  Any coin up to " + str(c.cost+3)+": ")
                     g = getcard(pick,supply,categories=["coin"],upto=c.cost+3)
                     if g:
                         player.hand.append(g)
