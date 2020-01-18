@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Oct 13 15:42:42 2015
+Created on Friday Jan 17 2020
 
-@author: tfleck
+@author: Miao Zhao
 """
 
 import Dominion
