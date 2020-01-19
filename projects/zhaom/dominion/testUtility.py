@@ -6,18 +6,6 @@ Created on Friday Jan 17 2020
 """
 
 import Dominion
-import random
-from collections import defaultdict
-
-#Get player names
-player_names = ["Annie","*Ben","*Carla"]
-
-#number of curses and victory cards
-if len(player_names)>2:
-    nV=12
-else:
-    nV=8
-nC = -10 + 10 * len(player_names)
 
 def GetBoxes(nV):
     #Define box
