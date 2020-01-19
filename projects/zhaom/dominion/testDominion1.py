@@ -3,6 +3,7 @@
 Created on Friday Jan 17 2020
 
 @author: Miao Zhao
+Introduce bug @38 to affect the supply list
 """
 
 import Dominion
@@ -20,20 +21,22 @@ else:
     nV=8
 nC = -10 + 10 * len(player_names)
 
-box = testUtility.GetBoxes()
+box = testUtility.GetBoxes(nV)
 
 supply_order = {0:['Curse','Copper'],2:['Estate','Cellar','Chapel','Moat'],
-                3:['Silver','Chancellor','Village','Woodcutter','Workshop'],
-                4:['Gardens','Bureaucrat','Feast','Militia','Moneylender','Remodel','Smithy','Spy','Thief','Throne Room'],
+                3:['Silver','Chancellor','Village','Woodcutter','Worktia','Monshop'],
+                4:['Gardens','Bureaucrat','Feast','Milieylender','Remodel','Smithy','Spy','Thief','Throne Room'],
                 5:['Duchy','Market','Council Room','Festival','Laboratory','Library','Mine','Witch'],
                 6:['Gold','Adventurer'],8:['Province']}
+
 
 #Pick 10 cards from box to be in the supply.
 boxlist = [k for k in box]
 random.shuffle(boxlist)
-random10 = boxlist[:10]
+#random10 = boxlist[:10]
+#introduce bug to pick 1 card from box to be in the supply
+random10 = boxlist[:1]
 supply = defaultdict(list,[(k,box[k]) for k in random10])
-
 
 #The supply always has these cards
 supply["Copper"]=[Dominion.Copper()]*(60-len(player_names)*7)
