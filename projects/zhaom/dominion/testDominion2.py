@@ -3,6 +3,7 @@
 Created on Friday Jan 17 2020
 
 @author: Miao Zhao
+introduce bug @22 to change nV
 """
 
 import Dominion
@@ -13,14 +14,18 @@ from collections import defaultdict
 #Get player names
 player_names = ["Annie","*Ben","*Carla"]
 
+
 #number of curses and victory cards
 if len(player_names)>2:
-    nV=12
+    #nV=12
+    #introduce bug to change nV
+    nV=2
 else:
     nV=8
 nC = -10 + 10 * len(player_names)
 
-box = testUtility.GetBoxes()
+box = testUtility.GetBoxes(nV)
+
 
 supply_order = {0:['Curse','Copper'],2:['Estate','Cellar','Chapel','Moat'],
                 3:['Silver','Chancellor','Village','Woodcutter','Workshop'],
